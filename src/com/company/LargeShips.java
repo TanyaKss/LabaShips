@@ -1,12 +1,26 @@
 package com.company;
 
+/**
+ * Класс больших кораблей.
+ *
+ * @author Киселева Татьяна
+ * @version 1.10 29 February 2020
+ */
 public class LargeShips extends Ship {
-    public LargeShips(String name, int numDecks, String color, int numGuns) {
+    /**
+     * Конструктор больших караблей.
+     *
+     * @param name
+     * @param numDecks
+     */
+    public LargeShips(final String name, final int numDecks) {
         super(name, numDecks, "Красный", 8);
     }
-
+    /**
+     * Метод "тонуть".
+     */
     @Override
-    public void sink(boolean crash) {
+    public void sink(final boolean crash) {
         String textSink = "";
         if (crash) {
             textSink = "тонет";
@@ -15,9 +29,11 @@ public class LargeShips extends Ship {
         }
         System.out.println("Корабль" + textSink);
     }
-
+    /**
+     * Метод "стрелять".
+     */
     @Override
-    public void shoot(int numCannonball) {
+    public void shoot(final int numCannonball) {
         String textShoot = "";
         if (numCannonball > 0) {
             textShoot = "Огонь!";

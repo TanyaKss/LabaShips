@@ -1,15 +1,26 @@
 package com.company;
 
-public class Main {
+final class Main {
+        private Main() {
+    }
+    /**
+     * Комментарий.
+     *
+     * @param args
+     */
+    public static void main(final String[] args) {
 
-    public static void main(String[] args) {
-	// write your code here
-        SmallShips small = new SmallShips("Bublik",3);
-        small.shoot(3);
+        SmallShips small = new SmallShips("Bublik", 3);
         small.swimm(true);
+        try {
+            small.shoot(-1);
+        } catch (PositivNumCannonball e) {
+            System.out.println("Введено неккоректное значение");
+        }
         Helper.shoot(small.getName());
         small.swimm();
         small.swimm(true);
         small.getName();
+
     }
 }
