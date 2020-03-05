@@ -20,7 +20,7 @@ final class Main {
         Helper.shoot(small.getName());
         small.swimm();
         small.swimm(true);
-        small.getName();
+
 
     }
 }
